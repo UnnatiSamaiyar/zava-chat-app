@@ -1,0 +1,22 @@
+{
+  "name": "electron-chat-app",
+  "version": "1.0.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && node server.js",
+    "dev:electron": "wait-on http://localhost:5173 && electronmon .",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:server\" \"npm run dev:electron\"",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend && electron-builder",
+    "start": "electronmon ."
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.0"
+  },
+  "dependencies": {
+    "electronmon": "^2.0.3"
+  }
+}

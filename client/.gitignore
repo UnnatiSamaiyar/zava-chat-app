@@ -1,5 +1,0 @@
-# Ignore node_modules and Electron binaries
-node_modules/
-*.log
-dist/
-*.exe
